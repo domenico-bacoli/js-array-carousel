@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin: 60px 0;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+}
+
+#container .carousel-image{
+    display: flex;
+    justify-content: center;
+}
+
+#container .carousel-image img{
+    width: 50%;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+}
+
+#container #carousel-container{
+    position: relative;
+}
+
+#container #carousel-container #arrow-up,
+#container #carousel-container #arrow-down{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+    background-color: gray;
+    border-radius: 50%;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#container #carousel-container #arrow-up{
+    top: 20px;
+}
+
+#container #carousel-container #arrow-down{ 
+    bottom: 20px; 
+}
+
+#container #carousel-container #arrow-up i,
+#container #carousel-container #arrow-down i{
+    font-weight: bold;
+    font-size: 18px;
+}
