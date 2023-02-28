@@ -24,7 +24,7 @@ h1{
 }
 
 #container .carousel-image img{
-    width: 50%;
+    width: 60%;
     aspect-ratio: 16/9;
     border-radius: 20px;
 }
@@ -41,7 +41,7 @@ h1{
     color: white;
     background-color: gray;
     border-radius: 50%;
-    padding: 8px 12px;
+    padding: 6px 10px;
     cursor: pointer;
 }
 
@@ -56,5 +56,5 @@ h1{
 #container #carousel-container #arrow-up i,
 #container #carousel-container #arrow-down i{
     font-weight: bold;
-    font-size: 18px;
+
 }
