@@ -21,10 +21,11 @@ h1{
 #container .carousel-image{
     display: flex;
     justify-content: center;
+    max-width: 800px;
 }
 
 #container .carousel-image img{
-    width: 60%;
+    width: 100%;
     aspect-ratio: 16/9;
     border-radius: 20px;
 }
