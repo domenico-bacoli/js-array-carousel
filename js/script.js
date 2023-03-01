@@ -11,7 +11,6 @@ const arrowUpEl = document.getElementById("arrow-up");
 const arrowDownEl = document.getElementById("arrow-down");
 const activeCarouselImagesEl = document.getElementById("active-carousel-images")
 const miniatureImageContainerEl = document.getElementById("miniature-image-container");
-const arrowContainerEl = document.querySelector(".arrow-container");
 
 // array di immagini
 const carouselImages = [
@@ -45,26 +44,35 @@ miniatureImageEl[index].classList.add("active");
 
 
 arrowDownEl.addEventListener("click", function(){
-    //aumenta di un'unità il valore di index preso da activeCarouselImageEl
-    index++;
-
+    //rimuovo la classe active alla miniatura corrispondente all'indice
+    miniatureImageEl[index].classList.remove("active");
+    if(index == carouselImages.length - 1){
+        index = 0;
+    } else{
+        //aumenta di un'unità il valore di index
+        index++;
+    }
+     
     //aggiungo la classe active alla miniatura corrispondente all'indice
     miniatureImageEl[index].classList.add("active");
     //mostra l'immagine relativa al valore dell'indice corrente
     activeCarouselImagesEl.src = carouselImages[index];
-
-    //rimuovo la classe active alla miniatura corrispondente all'indice - 1
-    miniatureImageEl[index - 1].classList.remove("active");
 });
 
 arrowUpEl.addEventListener("click", function(){
-    //diminuisco di un'unità il valore di index preso da activeCarouselImageEl
-    index--;
+    //rimuovo la classe active alla miniatura corrispondente all'indice
+    miniatureImageEl[index].classList.remove("active");
+    if(index == 0){
+        index = carouselImages.length - 1
+    } else {
+        //diminuisco di un'unità il valore di index preso da activeCarouselImageEl
+        index--;
+    }
     //aggiungo la classe active alla miniatura corrispondente all'indice
     miniatureImageEl[index].classList.add("active");
     //mostra l'immagine relativa al valore dell'indice corrente
     activeCarouselImagesEl.src = carouselImages[index];
-    //rimuovo la classe active alla miniatura corrispondente all'indice - 1
-    miniatureImageEl[index + 1].classList.remove("active");
+    
+   
 });
 
